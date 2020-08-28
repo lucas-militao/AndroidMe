@@ -35,6 +35,18 @@
             android:layout_height="180dp"
             android:scaleType="centerCrop"/>
 
+        <FrameLayout
+            android:id="@+id/bodyContainer"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"/>
+
+        <FrameLayout
+            android:id="@+id/legContainer"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"/>
+
 
     </LinearLayout>
 
