@@ -31,17 +31,21 @@ public class AndroidMeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_me);
 
+        int head = getIntent().getExtras().getInt("headIndex");
+        int body = getIntent().getExtras().getInt("bodyIndex");
+        int leg = getIntent().getExtras().getInt("legIndex");
+
         if (savedInstanceState == null) {
             BodyPartFragment headFragment = new BodyPartFragment();
             BodyPartFragment bodyFragment = new BodyPartFragment();
             BodyPartFragment legFragment = new BodyPartFragment();
 
             headFragment.setmImageIds(AndroidImageAssets.getHeads());
-            headFragment.setmListIndex(1);
+            headFragment.setmListIndex(head);
             bodyFragment.setmImageIds(AndroidImageAssets.getBodies());
-            bodyFragment.setmListIndex(1);
+            bodyFragment.setmListIndex(body);
             legFragment.setmImageIds(AndroidImageAssets.getLegs());
-            legFragment.setmListIndex(1);
+            legFragment.setmListIndex(leg);
 
             FragmentManager fragmentManager = getSupportFragmentManager();
 
